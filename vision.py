@@ -33,6 +33,10 @@ if uploaded_file is not None:
 
 submit=st.button("Tell me about the image")
 
+def resize_image(image, max_size=(512, 512)):
+    image.thumbnail(max_size, Image.ANTIALIAS)
+    return image
+    
 ## if submit is clicked
 if submit:
     if image:
